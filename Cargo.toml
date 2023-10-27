@@ -1,0 +1,34 @@
+[package]
+name = "merkle-tree"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+halo2_proofs = "0.3"
+halo2_gadgets = "0.3"
+halo2-base = { git = "https://github.com/axiom-crypto/halo2-lib", tag = "v0.3.0" }
+# taiga_halo2 = { git = "https://github.com/anoma/taiga", tag = "v0.1.2" }
+# taiga_halo2 = { path = "../taiga/taiga_halo2" }
+
+bitvec = "1"
+color-eyre = "0.6"
+rand_chacha = "0.3"
+rand = "0.8"
+proptest = { version = "1", optional = true }
+
+[dev-dependencies]
+pretty_assertions = "1"
+proptest = "1"
+test-strategy = "0.3"
+
+[patch.crates-io]
+# ark-serialize = { git="https://github.com/simonmasson/algebra", rev="e2ea75c" }
+# ark-ff = { git="https://github.com/simonmasson/algebra", rev="e2ea75c" }
+# ark-ec = { git="https://github.com/simonmasson/algebra", rev="e2ea75c" }
+halo2_gadgets = { git = "https://github.com/heliaxdev/halo2", branch = "taiga" }
+halo2_proofs = { git = "https://github.com/heliaxdev/halo2", branch = "taiga" }
+pasta_curves = { git = "https://github.com/heliaxdev/pasta_curves", branch = "taiga" }
+
